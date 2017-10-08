@@ -1,0 +1,67 @@
+
+The <generator> subelement of id used to generate the 
+unique identifier for the objects
+of persistent class. 
+There are many generator classes defined in the Hibernate Framework.
+
+All the generator classes implements the org.hibernate.id.IdentifierGenerator interface. The application programmer may create one's own generator classes by implementing the IdentifierGenerator interface. Hibernate framework provides many built-in generator classes:
+  assigned
+  increment
+  sequence
+  hilo
+  native
+  identity
+  seqhilo
+  uuid
+  guid
+  select
+  foreign
+  sequence-identity
+
+1) assigned
+
+It is the default generator strategy if there is no <generator> element . 
+In this case, application assigns the id. For example:
+
+2) increment
+
+It generates the unique id only if no other process is inserting data into this table. 
+It generates short, int or long type identifier. 
+The first generated identifier is 1 normally and incremented as 1. Syntax:
+
+3) native
+
+It uses identity, sequence or hilo depending on the database vendor. Syntax:
+
+
+SQL Dialects in Hibernate:-
+For connecting any hibernate application with the database,
+you must specify the SQL dialects. There are many Dialects classes defined for RDBMS in the org.hibernate.dialect package. They are as follows:
+
+
+
+RDBMS	                    Dialect
+ Oracle (any version)	org.hibernate.dialect.OracleDialect
+ Oracle9i	            org.hibernate.dialect.Oracle9iDialect
+ Oracle10g	            org.hibernate.dialect.Oracle10gDialect
+ MySQL	                org.hibernate.dialect.MySQLDialect
+ MySQL with InnoDB	    org.hibernate.dialect.MySQLInnoDBDialect
+ MySQL with MyISAM	    org.hibernate.dialect.MySQLMyISAMDialect
+ DB2	                org.hibernate.dialect.DB2Dialect
+ DB2 AS/400	            org.hibernate.dialect.DB2400Dialect
+ DB2 OS390	            org.hibernate.dialect.DB2390Dialect
+ Microsoft SQL Server	org.hibernate.dialect.SQLServerDialect
+ Sybase	                org.hibernate.dialect.SybaseDialect
+ Sybase Anywhere	        org.hibernate.dialect.SybaseAnywhereDialect
+ PostgreSQL	            org.hibernate.dialect.PostgreSQLDialect
+ SAP DB	                org.hibernate.dialect.SAPDBDialect
+ Informix	            org.hibernate.dialect.InformixDialect
+ HypersonicSQL	        org.hibernate.dialect.HSQLDialect
+ Ingres	                org.hibernate.dialect.IngresDialect
+ Progress	            org.hibernate.dialect.ProgressDialect
+ Mckoi SQL	            org.hibernate.dialect.MckoiDialect
+ Interbase	            org.hibernate.dialect.InterbaseDialect
+ Pointbase	            org.hibernate.dialect.PointbaseDialect
+ FrontBase	            org.hibernate.dialect.FrontbaseDialect
+ Firebird	
+
