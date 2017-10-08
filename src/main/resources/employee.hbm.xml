@@ -3,8 +3,9 @@
  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
   
+
  <hibernate-mapping>  
-  <class name="hibernate.Employee" table="emptable">  
+  <class name="hibernate.Employee" table="EMPTABLE">  
     <id name="id">  
      <generator class="assigned"></generator>  
     </id>  
@@ -13,5 +14,16 @@
     <property name="lastName"></property>  
             
   </class>  
+  
+    <class name="hibernate.Emp">  
+    <id name="id">  
+     <generator class="native"></generator>  
+    </id>  
+            
+    <property name="firstName" type = "string"></property>  
+    <property name="lastName" type = "string"></property> 
+    <property name="salary" type = "int"></property>
+            
+  </class>
             
  </hibernate-mapping>  

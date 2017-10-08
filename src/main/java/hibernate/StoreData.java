@@ -44,20 +44,20 @@ public class StoreData {
 		Transaction t = session.beginTransaction();
 
 		Employee e1 = new Employee();
-		e1.setId(7);
-		e1.setFirstName("abc6");
-		e1.setLastName("xyz6");
+		e1.setId(29);
+		e1.setFirstName("abc13");
+		e1.setLastName("xyz13");
 
 		session.persist(e1);// persisting the object
 		t.commit();// transaction is committed
 		
-		Transaction t1 = session.beginTransaction();
-		Employee e2 = new Employee();
-		e2.setId(8);
-		e2.setFirstName("ppp7");
-		e2.setLastName("lll7");
-		session.persist(e2);
-		t1.commit();
+//		Transaction t1 = session.beginTransaction();
+//		Employee e2 = new Employee();
+//		e2.setId(10);
+//		e2.setFirstName("ppp10");
+//		e2.setLastName("lll10");
+//		session.persist(e2);
+//		t1.commit();
 		
 		session.close();
 
